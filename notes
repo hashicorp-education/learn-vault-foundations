@@ -1,0 +1,28 @@
+vault list /auth/userpass/users
+vault read /sys/mounts/dev-secrets
+
+https://registry.terraform.io/providers/hashicorp/vault/latest/docs/guides/policies
+
+
+$ vault login -method=userpass username=danielle-vault-user
+Password (will be hidden):
+WARNING! The VAULT_TOKEN environment variable is set! The value of this
+variable will take precedence; if this is unwanted please unset VAULT_TOKEN or
+update its value accordingly.
+
+Success! You are now authenticated. The token information displayed below
+is already stored in the token helper. You do NOT need to run "vault login"
+again. Future Vault requests will automatically use this token.
+
+Key                    Value
+---                    -----
+token                  hvs.CAESICFSf3AqVDWqw8-xVf2vdHjBNIGDpQpPaTHMR9yiyBILGh4KHGh2cy5jZ1dIU3ZnRlVGTFlmM1QzRmd3Q3hzMDU
+token_accessor         Sx3yAtFlFEbwytkM1xAFwiPG
+token_duration         768h
+token_renewable        true
+token_policies         ["default" "developer-vault-policy"]
+identity_policies      []
+policies               ["default" "developer-vault-policy"]
+token_meta_username    danielle-vault-user
+
+unset VAULT_TOKEN
