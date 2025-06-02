@@ -2,7 +2,7 @@ terraform {
   required_providers {
     vault = {
       source = "hashicorp/vault"
-      version = "4.2.0"
+      version = "5.0.0"
     }
   }
 }
@@ -11,6 +11,7 @@ variable login_username {
   type = string
   default = "danielle-vault-user"
 }
+
 variable login_password {
   type = string
 }
